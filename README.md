@@ -46,4 +46,17 @@ IngestorInterface is a superclass to CSVDecode, PDFDecode,
 DOCXDecode, TXTDecode. IngestorInterface is an abstractclass which is realized 
 by Ingestor class in MainIngestor
   
-  
+ 
+**Tips for deployment**
+
+a. Use virtual environment. Open terminal
+  1.python3[.figure if you like] -m venv [venv] - name of the environment 
+  2.source venv/bin/activate -> it will activate our virtual environment. To exit it use: deactivate 
+  3.pip install -r requirements.txt
+ 
+b. For MacOS you'll need *brew*
+  1. /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  2. $ brew install wget
+  3. brew install --cask pdftotext
++ update: `pip install -U setuptools`
+
