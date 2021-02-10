@@ -38,6 +38,12 @@ b) CLI one
   1) run python3 meme.py in command line
   2) result can be found in output folder
   3) there a couple of customizations: 
-  *shortcuts: -a for --author, -b for --body and -p fof --path
+  _shortcuts: -a for --author, -b for --body and -p fof --path_
+  
+**A little bit about inheritance stuff**
+
+IngestorInterface is a superclass to CSVDecode, PDFDecode,
+DOCXDecode, TXTDecode. IngestorInterface is an abstractclass which is realized 
+by Ingestor class in MainIngestor
   
   
