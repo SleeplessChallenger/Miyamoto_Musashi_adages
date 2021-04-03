@@ -66,7 +66,7 @@ def meme_form():
 def meme_post():
     """ Create a user defined meme """
 
-    img = f"{pathlib.cwd()}/new_masterpiece.jpg"
+    img = f"{pathlib.Path.cwd()}/new_masterpiece.jpg"
     img_url = request.form.get('image_url')
     response = requests.get(img_url, stream=True)
     img_cont = response.content
