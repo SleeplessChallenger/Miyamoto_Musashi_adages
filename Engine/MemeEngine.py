@@ -14,7 +14,7 @@ class MemeEngine:
 		self.place = place
 		if not pathlib.Path(place).exists():
 			pathlib.Path(place).mkdir()
-		self.counter = 0
+		self.counter = 10
 
 	def make_meme(self, image, body, author, width=500):
 		self.counter += 1
