@@ -66,7 +66,7 @@ b. For MacOS you'll need *brew*
 1. the app is launched via <i>app.py</i> or <i>meme.py</i>. The former is for web created memes and the latter
    one is for CLI created ones. <br>
 
-**Firstly, let's look at web creted ones**
+**Firstly, let's look at web created ones**
 
 2. meme is an instance of MemeEngine with provided self.place as './static'. Then, quotes, img triggers setup() which will       
    attach photos & quotes to those two variables
@@ -81,7 +81,7 @@ b. For MacOS you'll need *brew*
 **Secondly, let's look at CLI creted ones**
 2. run <i>python3 meme.py</i> + user can add either of the options: -a='Some author' -b='Some body' -p='Some path'.
 
-3. In the fucntion depending on the provided above parameters there will be either default quotes & author taken
+3. In the function depending on the provided above parameters there will be either default quotes & author taken
    or provided by the user. If <i>body</i> is not None: the code will use <i>QuoteModel</i> class to store there
    self.author & self.body
 
@@ -92,7 +92,7 @@ b. For MacOS you'll need *brew*
 
 1. `quotes.extend(Ingestor.parse(y))` is in both aforewritten files. It goes straight to `Ingestors/MainIngestor.py -> class Ingestor'
 2. There code loops over provided `types` which comprises imported classes: `CSVclass, DOCXclass, TXTclass, PDFclass`.
-3. Program checks if either of those classes can parse file with such an extension. 
+3. Program checks if either of those classes can parse file with such an extension.<br>
    **Notice**
   Those classes themselves don't have `can_ingest()` function, but super class `IngestorInterface` in `Ingestors/QuoteEngine` has. 
   If provided extension is in `allowed` -> returns to `MainIngestor.py` -> goes into one of those classes and parse the file ->
