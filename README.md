@@ -93,6 +93,7 @@ b. For MacOS you'll need *brew*
 1. `quotes.extend(Ingestor.parse(y))` is in both aforewritten files. It goes straight to `Ingestors/MainIngestor.py -> class Ingestor'
 2. There code loops over provided `types` which comprises imported classes: `CSVclass, DOCXclass, TXTclass, PDFclass`.
 3. Program checks if either of those classes can parse file with such an extension.<br>
+
    **Notice**
   Those classes themselves don't have `can_ingest()` function, but super class `IngestorInterface` in `Ingestors/QuoteEngine` has. 
   If provided extension is in `allowed` -> returns to `MainIngestor.py` -> goes into one of those classes and parse the file ->
