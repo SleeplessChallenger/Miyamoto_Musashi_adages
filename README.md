@@ -64,9 +64,10 @@ b. For MacOS you'll need *brew*
 <hr>
 <h5>How does the overall flow happen?</h5>
 1. the app launches via <i>app.py</i> or <i>meme.py</i>. The former is for web created memes and the latter
-   one is for CLI created ones.
+   one is for CLI created ones. <br>
 
 **Firstly, let's look at web creted ones**
+
 2. meme is an instance of MemeEngine with provided sef.place as './static'. Then, quotes, img triggers setup() which will       
    attach photos & quotes to those two variables*
 
@@ -75,12 +76,12 @@ b. For MacOS you'll need *brew*
    new meme appears and is saved to './static'
 
 **Secondly, let's look at CLI creted ones**
-1. run <i>python3 meme.py</i> + user can add either of the options: -a='Some author' -b='Some body' -p='Some path'.
+2. run <i>python3 meme.py</i> + user can add either of the options: -a='Some author' -b='Some body' -p='Some path'.
 
-2. In the fucntion depending on the provided above parameters there will be either default quotes & author taken
+3. In the fucntion depending on the provided above parameters there will be either default quotes & author taken
    or provided by the user. If <i>body</i> is not None: the code will use <i>QuoteModel</i> class to store there
    self.author & self.body
 
-3. new path [in our case it'll be "./generated_quote"] is created if hasn't existed before. Here <i>meme</i> is also an 
+4. new path [in our case it'll be "./generated_quote"] is created if hasn't existed before. Here <i>meme</i> is also an 
    instance of MemeEngine class. 
    
