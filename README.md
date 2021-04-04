@@ -63,7 +63,7 @@ b. For MacOS you'll need *brew*
 <h3>Some additional explanation of the structure and inner-workings</h3>
 <hr>
 <h5>How does the overall flow happen?</h5>
-1. the app launches via <i>app.py</i> or <i>meme.py</i>. The former is for web created memes and the latter
+1. the app is launched via <i>app.py</i> or <i>meme.py</i>. The former is for web created memes and the latter
    one is for CLI created ones. <br>
 
 **Firstly, let's look at web creted ones**
