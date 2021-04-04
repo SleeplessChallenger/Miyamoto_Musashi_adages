@@ -9,8 +9,10 @@ import pathlib
 
 app = Flask(__name__)
 
-# meme = MemeEngine('./static')
 meme = MemeEngine('./static')
+# 1) gives MemeEngine class self.place
+# 2) 'meme' is a class instance which
+#    will be used for meme.make_mem(...)
 
 
 class UnableParsing(Exception):
@@ -76,6 +78,9 @@ def meme_post():
     author = request.form.get('author', 'Unnamed')
     path = meme.make_meme(img, body, author)
     os.remove(img)
+    # line above manages to delete files from
+    # '/src' folder and only keep newly 
+    # created meme in '/static'
 
     return render_template('meme.html', path=path)
 
