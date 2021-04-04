@@ -99,3 +99,54 @@ b. For MacOS you'll need *brew*
   If provided extension is in `allowed` -> returns to `MainIngestor.py` -> goes into one of those classes and parse the file ->
   comes back to `MainIngestor.py` and it returns quotes to either <i>app.py</i> or <i>meme.py</i> in list format.
   
+```bash
+.
+├── Engine
+│   ├── Bone.py
+│   ├── MemeEngine.py
+│   ├── QuoteEngine.py
+│   ├── __init__.py
+├── Ingestors
+│   ├── CSVDecode.py
+│   ├── DOCXDecode.py
+│   ├── MainIngestor.py
+│   ├── PDFDecode.py
+│   ├── TXTDecode.py
+│   ├── __init__.py
+├── _data
+│   ├── MiyamotoMusashiAdages
+│   │   ├── SamuraiAdages.csv
+│   │   ├── SamuraiAdages.docx
+│   │   ├── SamuraiAdages.pdf
+│   │   └── SamuraiAdages.txt
+│   ├── SimpleLines
+│   │   ├── SimpleLines.csv
+│   │   ├── SimpleLines.docx
+│   │   ├── SimpleLines.pdf
+│   │   └── SimpleLines.txt
+│   └── photos
+│       └── samurai
+│           ├── Samurai1.jpg
+│           ├── Samurai2.jpg
+│           ├── Samurai3.jpg
+│           ├── Samurai4.jpg
+│           ├── Samurai5.jpg
+│           ├── Samurai6.jpg
+│           ├── Samurai7.jpg
+│           ├── Samurai8.jpg
+│           └── Samurai9.jpg
+├── app.py
+├── generated_quote
+│   ├── Quote:\ 11.jpeg
+│   └── Quote:\ 42.jpeg
+├── meme.py
+├── requirements.txt
+├── static
+│   ├── Quote:\ 1.jpeg
+│   ├── Quote:\ 11.jpeg
+└── templates
+    ├── base.html
+    ├── meme.html
+    └── meme_form.html
+
+```
