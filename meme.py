@@ -1,7 +1,8 @@
 import os
 import random
-from .QuoteEngine import Ingestor
-from .MemeEngine import MemeEngine
+from Ingestors.MainIngestor import Ingestor
+from Engine.MemeEngine import MemeEngine
+from Engine.Bone import QuoteModel
 from pathlib import Path
 import argparse
 
@@ -45,8 +46,8 @@ def generate_meme(path=None, body=None, author=None):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='This program will output image with adage insripted on it',
-                                     proq='Wise adages generator',
                                      epilog='Listen to the master!')
+                                     # proq='Wise adages generator')
     parser.add_argument('-b', '--body', help='Put quote',
                         type=str, default=None)
     parser.add_argument('-a', '--author', help='Put author',
@@ -55,3 +56,4 @@ if __name__ == "__main__":
                         type=str, default=None)
     args = parser.parse_args()
     print(generate_meme(args.path, args.body, args.author))
+
