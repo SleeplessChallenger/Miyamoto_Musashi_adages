@@ -17,7 +17,7 @@ class MemeEngine:
 		self.counter = 10
 
 	def make_meme(self, image, body, author, width=500):
-		self.counter += 1
+		self.counter = random.randint(1, 100)
 		img = Image.open(image)
 		font = ImageFont.load_default()
 		output = os.path.join(self.place, f"Quote: {self.counter}.jpeg")
