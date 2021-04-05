@@ -98,7 +98,11 @@ b. For MacOS you'll need *brew*
   Those classes themselves don't have `can_ingest()` function, but super class `IngestorInterface` in `Ingestors/QuoteEngine` has. 
   If provided extension is in `allowed` -> returns to `MainIngestor.py` -> goes into one of those classes and parse the file ->
   comes back to `MainIngestor.py` and it returns quotes to either <i>app.py</i> or <i>meme.py</i> in list format.
-  
+
+<p>
+Article to read about python typing: https://realpython.com/python-type-checking/  
+</p>
+
 ```bash
 .
 ├── Engine
