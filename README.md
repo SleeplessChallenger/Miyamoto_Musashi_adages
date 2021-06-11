@@ -3,6 +3,8 @@
 random photos in hand with inscripted phrases either in
 the browser or via CLI.
 
+**Update**: Deployed with Docker. You can pull it with `docker pull enoshima/samurai_adages:latest`
+
 **Conceptual overview**
 
 1) OOP was highle leveraged with myraid features like
