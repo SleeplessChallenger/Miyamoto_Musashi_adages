@@ -13,7 +13,7 @@ class CSVclass(IngestorInterface):
     	if not cls.can_ingest(fl):
         	raise Exception('Not desired extension!')
         result = []
-        file = pd.read_csv(fl, header=0, encoding='latin-1')
+        file = pd.read_csv(fl, header=0, encoding='utf-8')
         for x, y in file.iterrows():
             new_obj = QuoteModel(y['Quote'], y['Master'])
             result.append(new_obj)
