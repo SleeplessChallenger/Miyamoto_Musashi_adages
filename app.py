@@ -24,8 +24,8 @@ def setup():
 
     quote_files = ['./_data/MiyamotoMusashiAdages/SamuraiAdages.txt',
                    './_data/MiyamotoMusashiAdages/SamuraiAdages.docx',
-                   './_data/MiyamotoMusashiAdages/SamuraiAdages.csv',
-                   './_data/MiyamotoMusashiAdages/SamuraiAdages.pdf']
+                   './_data/MiyamotoMusashiAdages/SamuraiAdages.csv'
+                   ]
 
     quotes = []
     for x in quote_files:
@@ -37,21 +37,23 @@ def setup():
             print(err)
 
     imgs = []
-    images_path = "/Users/daniilslobodenuk/Desktop/Udacity/src/_data/photos/"
+    # images_path = "/Users/daniilslobodenuk/Desktop/Udacity/src/_data/photos/samurai"
+    images_path = "./_data/photos/samurai"
     for root, dir, files in os.walk(images_path):
         if '.DS_Store' in files:
             files.remove('.DS_Store')
         imgs = [os.path.join(root, y) for y in files]
+
     return quotes, imgs
 
 
-quotes, imgs = setup()
+# quotes, imgs = setup()
 
 
 @app.route('/')
 def meme_rand():
     """ Generate a random meme """
-
+    global imgs, quotes
     img = random.choice(imgs)
     quote = random.choice(quotes)
     path = meme.make_meme(img, quote.body, quote.author)
@@ -86,4 +88,5 @@ def meme_post():
 
 
 if __name__ == "__main__":
-    app.run('localhost', 5000)
+    quotes, imgs = setup()
+    app.run(host='0.0.0.0', port=5000)
