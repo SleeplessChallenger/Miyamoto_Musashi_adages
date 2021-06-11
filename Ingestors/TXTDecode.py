@@ -11,7 +11,7 @@ class TXTclass(IngestorInterface):
 	def parse(cls, fl: str) -> List[QuoteModel]:
 		if not cls.can_ingest(fl):
 			raise Exception('Not desired extension!')
-		file = open(fl, "r", encoding="utf-8")
+		file = open(fl, "r", encoding="latin-1")
 		temp = file.readlines()
 		file.close()
 		bucket = list()
